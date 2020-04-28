@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空谷道</title>
+    <meta name="description" content="空谷道"/>
+    <meta name="keywords" content="空谷道"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/dist/css/mCustomScrollbar.css" media="all">
+    <script type="text/javascript" src="/dist/layui.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery2.1.4.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/main.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/masonry-docs.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/mCustomScrollbar.js"></script>
+    <script>
+        $(function() {
+            $(".scrollable").mCustomScrollbar({
+                scrollInertia:200,
+                theme:"dark"
+            });
+        });
+    </script>
+</head>
+<body class="atlas_box">
+<div class="mainbar">
+    <div class="wrap wrap_100">
+        <div class="atlas_con">
+            <div class="a_l">
+                <div class="pic"><img src="/dist/images/demo/pic07.jpg"> </div>
+            </div>
+            <div class="a_r">
+                <h3>收藏到图集</h3>
+
+                <div class="scrollable">
+                    <div class="item cur">
+                        <div class="con">
+                            <i class="icon-13"></i>
+                            <em>2张</em>
+                            <h3>风景摄影</h3>
+                        </div>
+                        <div class="pic"><img src="/dist/images/demo/pic01.jpg"></div>
+                    </div>
+                    <div class="item">
+                        <div class="con">
+                            <i class="icon-13"></i>
+                            <em>2张</em>
+                            <h3>风景摄影</h3>
+                        </div>
+                        <div class="pic"><img src="/dist/images/demo/pic02.jpg"></div>
+                    </div>
+                    <div class="item">
+                        <div class="con">
+                            <i class="icon-13"></i>
+                            <em>2张</em>
+                            <h3>写真</h3>
+                        </div>
+                        <div class="pic"><img src="/dist/images/demo/pic03.jpg"></div>
+                    </div>
+                    <div class="item">
+                        <div class="con">
+                            <i class="icon-13"></i>
+                            <em>2张</em>
+                            <h3>创意</h3>
+                        </div>
+                        <div class="pic"><img src="/dist/images/demo/pic04.jpg"></div>
+                    </div>
+                    <div class="item">
+                        <div class="con">
+                            <i class="icon-13"></i>
+                            <em>2张</em>
+                            <h3>APP经典</h3>
+                        </div>
+                        <div class="pic"><img src="/dist/images/demo/pic05.jpg"></div>
+                    </div>
+                    <div class="item">
+                        <div class="con">
+                            <i class="icon-13"></i>
+                            <em>2张</em>
+                            <h3>美图</h3>
+                        </div>
+                        <div class="pic"><img src="/dist/images/demo/pic06.jpg"></div>
+                    </div>
+                    <div class="item">
+                        <div class="con">
+                            <i class="icon-13"></i>
+                            <em>2张</em>
+                            <h3>心灵手巧</h3>
+                        </div>
+                        <div class="pic"><img src="/dist/images/demo/pic07.jpg"></div>
+                    </div>
+                    <div class="item">
+                        <div class="con">
+                            <i class="icon-13"></i>
+                            <em>2张</em>
+                            <h3>设计艺术</h3>
+                        </div>
+                        <div class="pic"><img src="/dist/images/demo/pic08.jpg"></div>
+                    </div>
+                </div>
+                <div class="btn_add On-btn"><a class="btn_subscribe j-btn" href="javascript:void(0)" data-method="OnNew_atlas">+ 创建新图集</a></div>
+            </div>
+            <script>
+                //Demo
+                layui.use('form', function(){
+                    var form = layui.form;
+
+                    //监听提交
+                    form.on('submit(formDemo)', function(data){
+                        layer.msg(JSON.stringify(data.field));
+                        return false;
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</div>
+<script>
+    layui.config({ base: '/dist/lay/modules/'}).use('layerfrom');
+</script>
+</body>
+</html>

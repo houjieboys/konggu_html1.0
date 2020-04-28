@@ -1,0 +1,87 @@
+@import "common";
+@import "layout";
+
+
+.so_list{margin:50px 0 20px 0;
+  h2{font-size:40px;}
+  .col_list{overflow:$hid;margin:30px 0;
+    li{overflow:$hid;border-bottom:1px solid $c09_e;@extend %fs20;padding:15px 0;
+      a{color:$c09_6;
+        &:hover{color:$c04;}
+      }
+    }
+  }
+}
+
+.swiperbar{margin:-50px auto 50px auto;
+  .swiper-container {
+    width:$w100;
+    height:$w100;
+    padding:20px 0;
+    margin:35px 0;
+    .swiper-wrapper{
+      $wp:2.4%;
+      //margin-left:-$wp;margin-bottom:$wp;
+      $h30:30px;
+      $h40:40px;
+      $h45:45px;
+      $h50:50px;
+      .swiper-slide {float:$c_l;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        text-align:$c_c;
+        //padding-left:$wp;padding-top:$wp;
+        padding:$wp/2;
+        .col_con{@include dz;
+          @include shadow_all;
+          &:hover{@include shadow_c07;@include fd;@include dz;}
+          background: $c10;
+          overflow:$hid;
+          width:$w100;
+          img{width:$w100;}
+          h3{color:$c09_3;
+            //margin:10px auto 20px auto;
+            width:90%;
+            @include ellipsis;
+          }
+          .txt{color:$c09_9;margin:0 auto;width:80%;overflow: $hid;}
+          .img{$wh:30%;
+            //margin:30px auto 10px auto;
+            display:inline-block;width:$wh;height:$wh;border-radius: 50%;overflow:$hid;
+          }
+          .btn{display:inline-block;width:$w50;
+            //margin:30px auto 45px auto;
+            border:1px solid $c01;
+            //height:$h40;line-height:$h40;
+            border-radius: $h40/5;
+            &:hover{border-color:$c07;background:$c07;color:$c10;}
+          }
+          .num{color:$c09_d;margin-top:-5px;}
+          .select{border-color:$c09_d;color:$c09_d;
+            &:hover{border-color:$c09_d; cursor: text;}
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

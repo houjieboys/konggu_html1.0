@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空谷道</title>
+    <meta name="description" content="空谷道"/>
+    <meta name="keywords" content="空谷道"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/dist/css/atlas.css" media="all">
+    <script type="text/javascript" src="/dist/layui.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery2.1.4.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/main.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/masonry-docs.js"></script>
+    <script>
+        //瀑布流
+        $(function() {
+            var $container = $('#masonry');
+            $container.imagesLoaded(function() {
+                $container.masonry({
+                    itemSelector: '.picn',
+                    gutter: 0,//间距
+                    isAnimated: true,//动画选项
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<!--#include virtual="/html/head.html" -->
+<div class="atlas_card">
+    <div class="wrap wrap_95">
+        <div class="m_r">
+            <div class="num">
+                <div class="num1"><p>3637</p>访问量</div>
+                <div class="num2"><p>36</p>收藏量</div>
+            </div>
+            <div class="stats">
+                <span class="icon-5">39</span>
+                <span class="share icon-41">分享</span>
+                <div class="sharebar">
+                    <a class="icon-6" href="Javascript: void(0)" title="微信"></a>
+                    <a class="icon-7" href="Javascript: void(0)" title="QQ"></a>
+                    <a class="icon-8" href="Javascript: void(0)" title="微博"></a>
+                    <a class="icon-47" href="Javascript: void(0)" title="QQ空间"></a>
+                    <a class="icon_close icon-41" href="Javascript: void(0)" title="收起"></a>
+                </div>
+            </div>
+        </div>
+        <div class="m_l">
+            <img src="/dist/images/demo/img01.jpg">
+        </div>
+        <div class="m_c">
+            <div class="m_tit">
+                <h2>青春懵懂的少女</h2>
+                <a class="btn_subscribe" href="#">订阅图集</a>
+            </div>
+            <div class="m_user">
+                <a href="user_imgtxt.html" class="user_img"><img src="/dist/images/demo/ph01.jpg"></a>
+                <a href="user_imgtxt.html" class="user_name">远处的白云</a>
+            </div>
+            <dl class="m_tag">
+                <dt>标签：</dt>
+                <dd>
+                    <a href="#">小米</a>
+                    <a href="#">概念图</a>
+                    <a href="#">品牌</a>
+                    <a href="#">探索实验室</a>
+                </dd>
+            </dl>
+            <div class="m_con">
+                由冯小刚导演、严歌苓编剧的电影《芳华》正在热映。一代人的芳华已逝，面目全非，虽然他们谈笑如故，但是不难看出岁月对每个人的改变，和难掩的失落。就让我们在音乐里，回到那个震撼动人的芬芳年华吧。
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mainbar atlas_bg">
+    <div class="wrap wrap_95">
+        <div class="list_imgtxt">
+            <ul class="col_l_5 col_list On-btn" id="masonry">
+                <!--#include virtual="/html/_content.html" -->
+            </ul>
+        </div>
+    </div>
+</div>
+<!--#include virtual="/html/foot.html" -->
+<script>
+    layui.config({ base: '/dist/lay/modules/'}).use('layerfrom');
+</script>
+</body>
+</html>

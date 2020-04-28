@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空谷道</title>
+    <meta name="description" content="空谷道"/>
+    <meta name="keywords" content="空谷道"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css" media="all">
+    <script type="text/javascript" src="/dist/layui.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery2.1.4.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/main.js"></script>
+</head>
+<body>
+<!--#include virtual="/html/head.html" -->
+<div class="mainbar">
+    <div class="wrap wrap_95">
+        <form method="get" action="search_content.html" class="searchbar m_tblr0" data-regestered="regestered" name="searchForm">
+            <input id="keywords" type="text" size="27" name="q" autocomplete="off" placeholder="不出于户，以知天下" value="">
+            <a href="javascript:void(0)" class="go icon-2" name="submit" onclick="document.searchForm.submit()"></a>
+        </form>
+        <ul class="tab01">
+            <li><a id="url1" href="javascript:void(0)">3.9K 图文</a></li>
+            <li><a id="url2" href="javascript:void(0)" class="cur">28.1K 图集</a></li>
+            <li><a id="url3" href="javascript:void(0)">88个知己</a></li>
+        </ul>
+        <div class="list_atlas">
+            <ul class="col_l_5 col_list On-btn">
+                <!--#include virtual="/html/_atlas.html" -->
+            </ul>
+        </div>
+    </div>
+</div>
+<!--#include virtual="/html/foot.html" -->
+<script>
+    layui.config({
+                base: '/dist/lay/modules/'
+            })
+            .use('search');
+</script>
+</body>
+</html>

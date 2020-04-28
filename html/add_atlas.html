@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空谷道</title>
+    <meta name="description" content="空谷道"/>
+    <meta name="keywords" content="空谷道"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css" media="all">
+    <script type="text/javascript" src="/dist/layui.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery2.1.4.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/main.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/masonry-docs.js"></script>
+</head>
+<body class="atlas_box">
+
+<div class="mainbar">
+    <div class="wrap wrap_100">
+        <div class="atlas_con">
+            <h2>新建图集</h2>
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="图集标题，不能超过32个字符" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标签</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="自定义标签，空格或回车添加标签" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">描述</label>
+                    <div class="layui-input-block">
+                        <textarea name="desc" placeholder="用一句话介绍自己的图集" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">创建图集</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+            <script>
+                //Demo
+                layui.use('form', function(){
+                    var form = layui.form;
+
+                    //监听提交
+                    form.on('submit(formDemo)', function(data){
+                        layer.msg(JSON.stringify(data.field));
+                        return false;
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空谷道</title>
+    <meta name="description" content="空谷道"/>
+    <meta name="keywords" content="空谷道"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/dist/css/user.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/dist/css/layui.css" media="all">
+    <script type="text/javascript" src="/dist/layui.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery2.1.4.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/main.js"></script>
+</head>
+<body>
+<!--#include virtual="/html/head.html" -->
+<div class="mainbar main_user">
+    <div class="wrap wrap_95">
+        <div class="main_c">
+            <div class="content_l">
+                <ul class="menu">
+                    <li><a href="settings.html" class="cur">个人资料</a></li>
+                    <li><a href="password.html">修改密码</a></li>
+                    <li><a href="auth.html">账户管理</a></li>
+                    <li><a href="reward.html">随缘打赏</a></li>
+                </ul>
+            </div>
+            <div class="content_r">
+                <div class="user_form_info">
+                    <form class="layui-form t_c" action="">
+                        <fieldset class="layui-elem-field layui-field-title">
+                            <legend>基础资料</legend>
+                        </fieldset>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">名号</label>
+                            <div class="layui-form-mid layui-word-aux">失眠的饼</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">归隐</label>
+                            <div class="layui-form-mid layui-word-aux">摄影谷</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">资质</label>
+                            <div class="layui-form-mid layui-word-aux">四年零三月</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">性别</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="sex" value="男" title="男">
+                                <input type="radio" name="sex" value="女" title="女" checked>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">邮箱</label>
+                            <div class="layui-input-inline"><input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input"></div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">一句话介绍</label>
+                            <div class="layui-input-block"><textarea placeholder="请输入内容" class="layui-textarea">资深图片控，喜爱摄影，对美的一切有独到的审美观</textarea></div>
+                        </div>
+
+                        <fieldset class="layui-elem-field layui-field-title" style="margin-top:80px;">
+                            <legend>联系方式</legend>
+                        </fieldset>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">微信</label>
+                            <div class="layui-input-inline"><input type="text" name="username" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input"></div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">QQ</label>
+                            <div class="layui-input-inline"><input type="text" name="qq-account" maxlength="20" class="layui-input" value="4920440" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label"></label>
+                            <button class="layui-btn layui-btn-lg">保存</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--#include virtual="/html/foot1.html" -->
+<script>
+    layui.config({ base: '/dist/lay/modules/'}).use('layerfrom');
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form
+                ,layer = layui.layer
+                ,layedit = layui.layedit
+                ,laydate = layui.laydate;
+
+        //表单初始赋值
+        form.val('example', {
+            "username": "贤心" // "name": "value"
+            ,"password": "123456"
+            ,"interest": 1
+            ,"like[write]": true //复选框选中状态
+            ,"close": true //开关状态
+            ,"sex": "女"
+            ,"desc": "我爱 layui"
+        })
+    });
+
+</script>
+</body>
+</html>

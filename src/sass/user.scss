@@ -1,0 +1,116 @@
+@import "common";
+@import "layout";
+
+
+.user_home{
+  width:$w100;height:360px;background:$c01;@include po_r;@include o_hid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  &:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+    background: -moz-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(100%, rgba(0, 0, 0, 0.5)));
+    background: -webkit-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+    background: -o-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+    background: -ms-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+  }
+  .home_bg{
+    img{min-height: 400px;
+      min-width: 1200px;
+      max-width: 2560px;}
+  }
+  .data_con{@include po_a;  width:$w100;  margin: 0 auto;  bottom: 0;  left: 0;  right: 0;  z-index: 1;
+    .data_list{@include po_r;text-align:$c_c;@extend %fs14;width:220px;color:rgba(255, 255, 255, 0.5);color:$c10;margin:20px 0;
+      a{@extend %fs28;@include disp_b;color:$c10;}
+    }
+  }
+}
+.user_info{$wh:120px;
+  @include po_r;text-align: $c_c;
+  .user_img{
+    border:3px solid $c10;@include disp_ib;@include o_hid;@include po_a;
+    top:-$wh/2;width:$wh;height:$wh;border-radius: $wh/2;margin-left:-$wh/2;
+    img{max-width: $wh;max-height:$wh;}
+  }
+  .user_name{@extend %fs28;color:$c09_3;padding-top:$wh/2+10px;}
+  .user_describe{margin:20px 0;}
+  .user_btn{margin:10px 0 40px 0;
+    .btn{ cursor: pointer;
+      $h:46px;
+      @extend %fs16;@include disp_ib;
+      margin:5px 10px;
+      border:none;
+      border-radius:$h/2;overflow:$hid;height:$h;line-height:$h;text-align: $c_c;padding:0 80px;
+    }
+    .btn_follow{background: $c07;color:$c10;
+      &:hover{background: $c07_1;}
+    }
+    .btn_msg{border:1px solid $c09_9;color:$c09_6;
+      &:hover{color:$c09_3;border:1px solid $c09_3;}
+    }
+  }
+}
+.user_tab{@extend %fs18;margin:0;clear: both;overflow: $hid;text-align: $c_c;
+  li{@include disp_ib;margin:0 50px;
+    a{color:$c09_6;margin:0;display:block;padding:10px 0;
+      &:hover{@include txt_hover;border-bottom:2px solid $c07;}
+    }
+    .cur{border-bottom:2px solid $c09_3;color:$c09_3;}
+  }
+}
+.user_form_info{width:780px;margin:0 auto;
+  li{@extend %fs16;margin:35px 0;color:$c09_3;
+    label{@include disp_ib;width:200px;text-align: $c_r;color:$c09_9;margin-right:15px;}
+
+  }
+}
+.user_add{margin:150px auto;text-align:$c_c;
+  h2{padding:30px 0;}
+  .btn_subscribe{@include disp_b;color:$c07;}
+}
+.main_user{
+  //background:$c09_f79b;
+  //background:url("/src/images/demo/dh.gif");
+}
+
+
+.main_c{
+  width:1200px;margin:0 auto;
+  $w1:150px;
+  $w2:140px;
+  .content_l{@include f_l;width:$w1;background: $c09_f79b;
+    .menu{text-align:$c_c;
+      $h:24px;
+      li{
+        a{@include f_l;width:$w100;height:$h;line-height:$h;margin:15px 0;@extend %fs16;color:$c09_6;
+        }
+        .cur{border-right:2px solid $c07_1;color:$c07_1;}
+      }
+    }
+  }
+  .content_r{@include f_r;
+    width: -webkit-calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    width: calc(100% - 200px);
+  }
+}
+
+.layui-form{
+  $h:20px;
+  .layui-form-label,.layui-form-mid,.layui-input-block{line-height:$h;}
+  .t_c{text-align: $c_c;}
+  .col_y{color:$c03;}
+  .col_n{color:$c09_6;}
+}
+.layui-input-block,.layui-form-item{text-align: $c_l;}
+
+

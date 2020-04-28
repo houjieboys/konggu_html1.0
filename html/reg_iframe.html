@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空谷道</title>
+    <meta name="description" content="空谷道"/>
+    <meta name="keywords" content="空谷道"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css" media="all">
+    <script type="text/javascript" src="/dist/layui.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery2.1.4.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/main.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/masonry-docs.js"></script>
+    <script language="javascript">
+        //输入你希望根据页面高度自动调整高度的iframe的名称的列表
+        //用逗号把每个iframe的ID分隔. 例如: ["myframe1", "myframe2"]，可以只有一个窗体，则不用逗号。
+        //定义iframe的ID
+        var iframeids=["layui-layer-iframe1,layui-layer-iframe2,layui-layer-iframe3"];
+        //如果用户的浏览器不支持iframe是否将iframe隐藏 yes 表示隐藏，no表示不隐藏
+        var iframehide="yes";
+        function dyniframesize()
+        {
+            var dyniframe=new Array()
+            for (i=0; i<iframeids.length; i++)
+            {
+                if (document.getElementById)
+                {
+//自动调整iframe高度
+                    dyniframe[dyniframe.length] = document.getElementById(iframeids[i]);
+                    if (dyniframe[i] && !window.opera)
+                    {
+                        dyniframe[i].style.display="block";
+                        if (dyniframe[i].contentDocument && dyniframe[i].contentDocument.body.offsetHeight) //如果用户的浏览器是NetScape
+                            dyniframe[i].height = dyniframe[i].contentDocument.body.offsetHeight;
+                        else if (dyniframe[i].Document && dyniframe[i].Document.body.scrollHeight) //如果用户的浏览器是IE
+                            dyniframe[i].height = dyniframe[i].Document.body.scrollHeight;
+                    }
+                }
+//根据设定的参数来处理不支持iframe的浏览器的显示问题
+                if ((document.all || document.getElementById) && iframehide=="no")
+                {
+                    var tempobj=document.all? document.all[iframeids[i]] : document.getElementById(iframeids[i]);
+                    tempobj.style.display="block";
+                }
+            }
+        }
+        if (window.addEventListener)
+            window.addEventListener("load", dyniframesize, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", dyniframesize);
+        else
+            window.onload=dyniframesize;
+    </script>
+</head>
+<body class="login_box">
+
+<div class="mainbar_none">
+    <div class="wrap wrap_w400">
+        <div class="reg_con On-btn">
+            <h1>用第三方帐号注册空谷道</h1>
+            <h3>专注于高品质图片分享和兴趣社交的的社群</h3>
+            <form class="from_item layui-form layui-form-pane" action="">
+                <div class="buttons">
+                    <a class="icon-6" title="微信帐号登录"></a>
+                    <a class="icon-7" title="QQ帐号登录"></a>
+                    <a class="icon-8" title="微博帐号登录"></a>
+                </div>
+                <div class="reg_link"><a href="reg2.html">使用手机号注册</a></div>
+                <!--<div class="t_r">已有账号？去 <a class="txt_link j-btn" href="javascript:void(0)" data-method="OnLogin">登录</a></div>-->
+                <div class="t_r">已有账号？去 <a class="txt_link" href="login_iframe.html">登录</a></div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    layui.config({
+                base: '/dist/lay/modules/' //你的模块目录
+            })
+            .use('layerfrom'); //加载入口
+</script>
+</body>
+</html>

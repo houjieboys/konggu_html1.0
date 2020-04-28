@@ -1,0 +1,179 @@
+//    @mixin 调用方法
+//    #somebox{
+//      @include dz();
+//      &:hover {
+//        @include yd(-10px,-10px);
+//      }
+//    }
+
+html {font-size: 625%; /*100 ÷ 16 × 100% = 625%*/}
+
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+  html{ font-size: 703%; }
+}
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+  html{ font-size: 732.4%; }
+}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+  html{ font-size: 750%; }
+}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+  html{ font-size: 781.25%; }
+}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){
+  html{ font-size: 808.6%; }
+}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
+  html{ font-size: 843.75%; }
+}
+
+// 执行动画以及执行时间设定
+@mixin dz($time:0.5s){
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+// 旋转动画调用
+@mixin xz($deg:360){
+  transform:rotate($deg+deg);
+  -webkit-transform:rotate($deg+deg);
+  -moz-transform:rotate($deg+deg);
+  -o-transform:rotate($deg+deg);
+  -ms-transform:rotate($deg+deg);
+}
+// 放大动画
+@mixin fd($s1:1.1){
+  transform:scale($s1);
+  -webkit-transform:scale($s1);
+  -moz-transform:scale($s1);
+  -o-transform:scale($s1);
+  -ms-transform:scale($s1);
+}
+// 旋转放大动画
+@mixin xzfd($deg:360,$s1:1.2){
+  transform:rotate($deg+deg) scale($s1);
+  -webkit-transform:rotate($deg+deg) scale($s1);
+  -moz-transform:rotate($deg+deg) scale($s1);
+  -o-transform:rotate($deg+deg) scale($s1);
+  -ms-transform:rotate($deg+deg) scale($s1);
+}
+// 移动动画
+@mixin yd($s1:0,$s2:0){
+  transform:translate($s1,$s2);
+  -webkit-transform:translate($s1,$s2);
+  -moz-transform:translate($s1,$s2);
+  -o-transform:translate($s1,$s2);
+  -ms-transform:translate($s1,$s2);
+}
+
+@mixin shadow_all($s1:15px,$s2:0.1){
+  -moz-box-shadow: 0 0 $s1 rgba(0, 0, 0, $s2);
+  -webkitbox-shadow: 0 0 $s1 rgba(0, 0, 0, $s2);
+  box-shadow: 0 0 $s1 rgba(0, 0, 0, $s2);
+}
+
+@mixin shadow_b($s1:10px,$s2:0.15){
+  -moz-box-shadow: 0 0 $s1 rgba(0, 0, 0, $s2);
+  -webkitbox-shadow: 0 0 $s1 rgba(0, 0, 0, $s2);
+  box-shadow: 0 0 $s1 rgba(0, 0, 0, $s2);
+}
+
+//阴影
+@mixin shadow_c01($s1:20px,$s2:0.4){
+  -webkit-box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  //-webkit-text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  //-moz-text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  //text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+}
+@mixin shadow_c01_1($s1:20px,$s2:0.2){
+  -webkit-box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -webkit-text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -moz-text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+}
+@mixin shadow_c04($s1:20px,$s2:0.3,$s3:0.8){
+  -webkit-box-shadow: 0 0 $s1 rgba(255, 117, 26, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(255, 117, 26, $s2);
+  box-shadow: 0 0 $s1 rgba(255, 117, 26, $s2);
+  //-webkit-text-shadow: 0 0 $s1 rgba(255, 117, 26, $s3);
+  //-moz-text-shadow: 0 0 $s1 rgba(255, 117, 26, $s3);
+  //text-shadow: 0 0 $s1 rgba(255, 117, 26, $s3);
+}
+@mixin shadow_c06($s1:20px,$s2:0.3,$s3:0.8){
+  -webkit-box-shadow: 0 0 $s1 rgba(10, 210, 93, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(10, 210, 93, $s2);
+  box-shadow: 0 0 $s1 rgba(10, 210, 93, $s2);
+  -webkit-text-shadow: 0 0 $s1 rgba(10, 210, 93, $s3);
+  -moz-text-shadow: 0 0 $s1 rgba(10, 210, 93, $s3);
+  text-shadow: 0 0 $s1 rgba(10, 210, 93, $s3);
+}
+@mixin shadow_c07($s1:40px,$s2:0.15,$s3:0.8){
+  -webkit-box-shadow: 0 0 $s1 rgba(0, 198, 247, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(0, 198, 247, $s2);
+  box-shadow: 0 0 $s1 rgba(0, 198, 247, $s2);
+  //-webkit-text-shadow: 0 0 20px rgba(0, 198, 247, $s3);
+  //-moz-text-shadow: 0 0 20px rgba(0, 198, 247, $s3);
+  //text-shadow: 0 0 20px rgba(0, 198, 247, $s3);
+}
+
+
+@mixin po_r{position:$position_r;}
+@mixin po_f{position:$position_f;}
+@mixin po_a{position:$position_a;}
+@mixin txt_hover{color:$c07;}
+
+@mixin f_l{float:$c_l;}
+@mixin f_c{float:$c_c;}
+@mixin f_r{float:$c_r;}
+
+@mixin disp_n{display:none;}
+@mixin disp_b{display:block;}
+@mixin disp_ib{display:inline-block;}
+
+@mixin o_hid{overflow:$hid;}
+
+@mixin wm_rl{
+  writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+
+
+@mixin fs($fs){
+    font-size:$fs;
+}
+
+@for $i from 10 through 48 {
+  %fs#{$i}{ font-size: 1px * $i; }
+}
+
+// 文字省略号
+@mixin ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//占坑符%placeholder
+//%mt15 {
+//  margin-top: 15px;
+//}
+//%pt15{
+//  padding-top: 15px;
+//}
+//
+//.btn6 {
+//  @extend %mt15;
+//  @extend %pt15;
+//}
+//.block {
+//  //@ex}tend .btn6
+//  @extend %mt15;
+//  @extend %pt15;

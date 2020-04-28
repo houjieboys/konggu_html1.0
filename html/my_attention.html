@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空谷道</title>
+    <meta name="description" content="空谷道"/>
+    <meta name="keywords" content="空谷道"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css" media="all">
+    <script type="text/javascript" src="/dist/layui.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery2.1.4.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/main.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/masonry-docs.js"></script>
+    <!--<script type="text/javascript" src="http://jq22.qiniudn.com/masonry-docs.min.js"></script>-->
+    <script>
+        //瀑布流
+        $(function() {
+            var $container = $('#masonry');
+            $container.imagesLoaded(function() {
+                $container.masonry({
+                    itemSelector: '.picn',
+                    gutter: 0,//间距
+                    isAnimated: true,//动画选项
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<!--#include virtual="/html/head.html" -->
+<div class="mainbar">
+    <div class="wrap wrap_95">
+        <div class="titbar">
+            <div class="txt">
+                <p class="quote-content"></p>
+                <div class="btn btn-primary btn_next more"><a href="javascript:;" onclick="lanren.loadMore();"><i class="icon-46"></i>刷新</a></div>
+            </div>
+            <div class="numbar">
+                <div class="num1">26°C</div>
+                <div class="num2">初三</div>
+                <div class="num3">
+                    <p>二零一七年十二月三日</p>
+                    <p>辛丑年</p>
+                    <p>星期一</p>
+                </div>
+                <div class="num4">空谷日签</div>
+            </div>
+        </div>
+        <ul class="tab01">
+            <li><a href="#" class="cur">慕名推荐</a></li>
+            <li><a href="#">百家争鸣</a></li>
+            <li><a href="#" >崭露头角</a></li>
+            <li><a href="#" >炙手可热</a></li>
+        </ul>
+        <div class="list_imgtxt">
+            <ul class="col_l_5 col_list On-btn" id="masonry">
+                <!--#include virtual="/html/_content.html" -->
+            </ul>
+        </div>
+    </div>
+</div>
+<!--#include virtual="/html/foot.html" -->
+</body>
+</html>

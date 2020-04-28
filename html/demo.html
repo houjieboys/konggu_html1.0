@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jquery showMore 显示更多</title>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/jquery.showMore.js"></script>
+</head>
+<body>
+<ul class="showMoreNChildren" pagesize="5">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+    <li>f</li>
+    <li>g</li>
+    <li>h</li>
+    <li>i</li>
+    <li>j</li>
+    <li>k</li>
+    <li>m</li>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+    <li>f</li>
+    <li>g</li>
+    <li>h</li>
+    <li>i</li>
+    <li>j</li>
+    <li>k</li>
+    <li>m</li>
+</ul>
+
+<ul class="mynews" pagesize="4">
+    <li>news 11</li>
+    <li>news 12</li>
+    <li>news 13</li>
+    <li>news 14</li>
+    <li>news 21</li>
+    <li>news 22</li>
+    <li>news 23</li>
+    <li>news 24</li>
+    <li>news 31</li>
+    <li>news 32</li>
+    <li>news 33</li>
+    <li>news 34</li>
+</ul>
+
+<script type="text/javascript">
+    //调用显示更多插件。参数是标准的 jquery 选择符
+    $.showMore(".showMoreNChildren,.mynews");
+</script>
+</body>
+</html>
+JavaScript code
+
+(function () {
+var showMoreNChildren = function ($children, n) {
+//显示某jquery元素下的前n个隐藏的子元素
+var $hiddenChildren = $children.filter(":hidden");
+var cnt = $hiddenChildren.length;
+for (var i = 0; i < n && i < cnt ; i++) {
+$hiddenChildren.eq(i).show();
+}
+return cnt - n;//返回还剩余的隐藏子元素的数量
+}
+
+jQuery.showMore = function (selector) {
+if (selector == undefined) { selector = ".showMoreNChildren" }
+//对页中现有的class=showMorehandle的元素，在之后添加显示更多条，并绑定点击行为
+$(selector).each(function () {
+var pagesize = $(this).attr("pagesize") || 10;
+var $children = $(this).children();
+if ($children.length > pagesize) {
+for (var i = pagesize; i < $children.length; i++) {
+$children.eq(i).hide();
+}
+
+$("<div class='showMorehandle' >显示更多</div>").insertAfter($(this)).click(function () {
+if (showMoreNChildren($children, pagesize) <= 0) {
+//如果目标元素已经没有隐藏的子元素了，就隐藏“点击更多的按钮条”
+$(this).hide();
+};
+});
+}
+});
+}
+})();

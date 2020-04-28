@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空谷道</title>
+    <meta name="description" content="空谷道"/>
+    <meta name="keywords" content="空谷道"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/dist/css/user.css" media="all">
+    <script type="text/javascript" src="/dist/layui.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery2.1.4.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/main.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/masonry-docs.js"></script>
+    <script>
+        //瀑布流
+        $(function() {
+            var $container = $('#masonry');
+            $container.imagesLoaded(function() {
+                $container.masonry({
+                    itemSelector: '.picn',
+                    gutter: 0,//间距
+                    isAnimated: true,//动画选项
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<!--#include virtual="/html/head.html" -->
+<div class="user_home">
+    <div class="home_bg">
+        <img src="/dist/images/demo/home_bg.png">
+    </div>
+    <div class="data_con">
+        <div class='wrap'>
+            <div class="data_list f_l"><a href="">45123</a>声望</div>
+            <div class="data_list f_l"><a href="">3004</a>发布</div>
+            <div class="data_list f_r"><a href="">456</a>关注</div>
+            <div class="data_list f_r"><a href="">32</a>消息</div>
+        </div>
+    </div>
+</div>
+<div class="user_info">
+    <div class="user_img"><img src="/dist/images/demo/ph07.jpg"></div>
+    <div class="user_name">乡里野人</div>
+    <div class="user_describe">资深图片控，喜爱摄影，对美的一切有独到的审美观</div>
+    <div class="user_btn">
+        <a class="btn_follow btn" href="#">关注</a>
+        <a class="btn_msg btn" href="#">私信</a>
+    </div>
+    <ul class="user_tab">
+        <li><a href="user_imgtxt.html"alt="图文">图文</a></li>
+        <li><a href="user_atlas.html" class="cur"  alt="图集">图集</a></li>
+        <li><a href="user_info.html" alt="资料">资料</a></li>
+    </ul>
+</div>
+<div class="mainbar main_user">
+    <div class="wrap wrap_95">
+        <!--内容列表-->
+        <div class="list_atlas">
+            <ul class="col_l_5 col_list On-btn" id="masonry">
+                <!--#include virtual="/html/_atlas_u.html"-->
+            </ul>
+        </div>
+
+        <!--无内容时-->
+        <div class="user_add On-btn">
+            <h2>莫往外面寻，心中藏乾坤。</h2>
+            <a class="btn_subscribe j-btn" href="javascript:void(0)" data-method="OnNew_atlas">创建新的图集 >></a>
+        </div>
+    </div>
+</div>
+<!--#include virtual="/html/foot.html" -->
+<script>
+    layui.config({ base: '/dist/lay/modules/'}).use('layerfrom');
+</script>
+</body>
+</html>

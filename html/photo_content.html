@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空谷道</title>
+    <meta name="description" content="空谷道"/>
+    <meta name="keywords" content="空谷道"/>
+    <link rel="stylesheet" type="text/css" href="/dist/css/content.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/dist/css/mCustomScrollbar.css" media="all">
+    <script type="text/javascript" src="/dist/layui.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/jquery2.1.4.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/main.js?3"></script>
+    <script type="text/javascript" src="/dist/lay/modules/masonry-docs.js"></script>
+    <script type="text/javascript" src="/dist/lay/modules/mCustomScrollbar.js"></script>
+    <script>
+        $(function() {
+            var $container_m = $('#masonry_m');
+            var $container_s = $('#masonry_s');
+            $container_s.imagesLoaded(function() {
+                $container_s.masonry({
+                    itemSelector: '.picn',//要布局的网格元素
+                    isAnimated:true,//使用jquery的布局变化  Boolean
+                    animationOptions:{
+                        //jquery animate属性 渐变效果  Object { queue: false, duration: 500 }
+                    },
+                    isFitWidth:true,// 适应宽度   Boolean
+                    isResizableL:true,// 是否可调整大小 Boolean
+                });
+            });
+            $container_m.imagesLoaded(function() {
+                $container_m.masonry({
+                    itemSelector: '.picn',
+                    gutter: 0,//间距
+                    isAnimated: true,//动画选项
+                });
+            });
+
+            $(".photo_con").mCustomScrollbar({
+                scrollInertia:150,
+                theme:"dark"
+            });
+        });
+    </script>
+</head>
+<body class="photo_con">
+<!--#include virtual="/html/head.html" -->
+<div class="main_content">
+    <div class="wrap wrap_100">
+        <div class="content_l">
+            <div class="photo_content">
+                <div class="switch_prev"><i class="icon-22"></i></div>
+                <div class="switch_next"><i class="icon-23"></i></div>
+                <img class="photo" src="/dist/images/demo/car/2.jpg">
+            </div>
+            <div class="btn_attention">
+                <a href="Javascript: void(0)"><i class="icon-16"></i></a>
+            </div>
+            <div class="fav_userbar">
+                <h3>他们也收藏了这张图</h3>
+                <div class="m_user">
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph01.jpg"></a>
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph02.jpg"></a>
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph03.jpg"></a>
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph04.jpg"></a>
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph05.jpg"></a>
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph06.jpg"></a>
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph07.jpg"></a>
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph08.jpg"></a>
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph09.jpg"></a>
+                    <a href="#" class="user_img"><img src="/dist/images/demo/ph10.jpg"></a>
+                </div>
+            </div>
+            <div class="tagbar">
+                <a href="#">小米</a>
+                <a href="#">概念图</a>
+                <a href="#">品牌</a>
+                <a href="#">探索实验室</a>
+                <a href="#">概念图</a>
+                <a href="#">品牌</a>
+                <a href="#">探索实验室</a>
+                <a href="#">品牌</a>
+                <a href="#">探索实验室</a>
+                <a href="#">概念图</a>
+                <a href="#">品牌</a>
+                <a href="#">探索实验室</a>
+            </div>
+        </div>
+        <div class="content_r">
+            <div class="photo_sidebar">
+                <div class="photo_sticky_header">
+                    <dl class="m_user">
+                        <dt>
+                            <a href="#" class="user_img"><img src="/dist/images/demo/ph02.jpg"></a>
+                        </dt>
+                        <dd>
+                            <p><a href="#" class="user_name">远处的白云</a></p>
+                            <p><a class="btn select" href="#">慕名已久</a></p>
+                        </dd>
+                    </dl>
+                    <div class="m_actions">
+                        <div class="a_l">
+                            <a href="#" class="icon-42"><span>26</span></a>
+                        </div>
+                        <div class="a_c">
+                            <a href="#" class="icon-43"><span>图集</span></a>
+                        </div>
+                        <div class="a_r">
+                            <a href="#" class="icon-41"><span>分享</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo_list">
+                    <h3>更多内容来自于</h3>
+                    <h2>禅道与人生</h2>
+                    <div class="photo_con">
+                        <ul class="col_l_3 col_list" id="masonry_s">
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic01.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic02.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic03.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic04.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic05.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic06.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic07.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic08.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic09.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic10.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic11.jpg"></A></li>
+                            <li class="picn"><A href="#"><img src="/dist/images/demo/pic12.jpg"></A></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="photo_description">
+                    <div class="con">茶道，品茶，品人生，做一个有内容的人</div>
+                    <div>
+                        <span class="name">禅道</span>
+                        <span class="date">发布时间：2017-09-15</span>
+                    </div>
+                </div>
+                <div class="photo_btn On-btn">
+                    <a class="icon-43 j-btn" href="javascript:void(0)" data-method="OnFav_atlas" ><span>收藏到图集</span></a>
+                </div>
+                <div class="photo_share">
+                    <div class="sharebar">
+                        <a class="icon-6" href="Javascript: void(0)" title="微信"></a>
+                        <a class="icon-7" href="Javascript: void(0)" title="QQ"></a>
+                        <a class="icon-8" href="Javascript: void(0)" title="微博"></a>
+                        <a class="icon-47" href="Javascript: void(0)" title="QQ空间"></a>
+                        <a class="icon_close icon-41" href="Javascript: void(0)" title="收起"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mainbar ma_tb20">
+    <div class="wrap wrap_95">
+        <div class="content_l">
+            <div class="commentbar">
+                <h2>评论</h2>
+                <div class="comments">
+                    <!--评论列表-->
+                    <div class="comment_line">
+                        <i class="user"><a href="#"> <img src="/dist/images/demo/ph01.jpg"></a></i>
+                        <div class="c_con">
+                            <div class="name">消失的地平线</div>
+                            <div class="date">15小时前</div>
+                            <div class="operation">
+                                <A href="#" class="btn01"><span class="icon-9">举报</span></A>
+                                <A href="#" class="btn02"><span class="icon-16">26</span></A>
+                                <A href="#" class="btn03"><span class="icon-5">回复</span></A>
+                            </div>
+                            <div class="c_txt">非常喜欢，中亚风格的配乐和那个神殿特别契合~棒！</div>
+                            <div class="quote_content">
+                                <i></i>
+                                <div class="usernicks">
+                                    <div class="usernick">
+                                        <a href="#" class="name" target="_blank">a04818bbj</a>
+                                        <a href="#" class="btn01"><span class="icon-5">回复</span></a>
+                                    </div>
+                                    <div class="userreply">人家都说了是灯泡 - = </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment_line">
+                        <i class="user"><a href="#"> <img src="/dist/images/demo/ph01.jpg"></a></i>
+                        <div class="c_con">
+                            <div class="name">消失的地平线</div>
+                            <div class="date">15小时前</div>
+                            <div class="operation">
+                                <A href="#" class="btn01"><span class="icon-9">举报</span></A>
+                                <A href="#" class="btn02"><span class="icon-16">26</span></A>
+                            </div>
+                            <div class="c_txt">非常喜欢，中亚风格的配乐和那个神殿特别契合~棒！</div>
+                        </div>
+                    </div>
+                    <div class="comment_line">
+                        <i class="user"><a href="#"> <img src="/dist/images/demo/ph01.jpg"></a></i>
+                        <div class="c_con">
+                            <div class="name">消失的地平线</div>
+                            <div class="date">15小时前</div>
+                            <div class="operation">
+                                <A href="#" class="btn01"><span class="icon-9">举报</span></A>
+                                <A href="#" class="btn02"><span class="icon-16">26</span></A>
+                            </div>
+                            <div class="c_txt">非常喜欢，中亚风格的配乐和那个神殿特别契合~棒！</div>
+                        </div>
+                    </div>
+                    <div class="comment_line">
+                        <i class="user"><a href="#"> <img src="/dist/images/demo/ph01.jpg"></a></i>
+                        <div class="c_con">
+                            <div class="name">消失的地平线</div>
+                            <div class="date">15小时前</div>
+                            <div class="operation">
+                                <A href="#" class="btn01"><span class="icon-9">举报</span></A>
+                                <A href="#" class="btn02"><span class="icon-16">26</span></A>
+                            </div>
+                            <div class="c_txt">非常喜欢，中亚风格的配乐和那个神殿特别契合~棒！</div>
+                        </div>
+                    </div>
+                    <!--游客-->
+                    <div class="comment_tourist disp_n">
+                        <i class="icon-45"></i>
+                        <span class="c_txt">也想留下您的高见？<a href="reg.html">进山</a>或<a href="login.html">入住</a></span>
+                    </div>
+                    <!--已登录-->
+                    <div class="comment_user">
+                        <div class="comment_add">
+                            <i class="user"><a href="#"> <img src="/dist/images/demo/ph11.jpg"></a></i>
+                            <textarea name="caption" placeholder="添加评论或把采集@给好友" class="clear_input" autocomplete="off"></textarea>
+                            <a href="" class="btn">发表评论</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrap wrap_95">
+    <div class="content_l">
+        <div class="col_title">
+            <h2>收录在图集中</h2>
+        </div>
+        <div class="list_atlas">
+            <ul class="col_l_4 col_list">
+                <li>
+                    <div class="col_con">
+                        <div class="img"><a href="#"><img src="/dist/images/demo/img01.jpg"></a></div>
+                        <h3><a href="#">青春懵懂,女青春懵懂一叶落知天下秋</a></h3>
+                        <p>创建者：<span><a href="#">遥远的天际</a></span></p>
+                        <i class="user"><a href="#"> <img src="/dist/images/demo/ph01.jpg"></a></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="col_con">
+                        <div class="img"><a href="#"><img src="/dist/images/demo/img02.jpg"></a></div>
+                        <h3><a href="#">青春懵懂的少女</a></h3>
+                        <p>创建者：<span><a href="#">遥远的天际</a></span></p>
+                        <i class="user"><a href="#"> <img src="/dist/images/demo/ph02.jpg"></a></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="col_con">
+                        <div class="img"><a href="#"><img src="/dist/images/demo/img03.jpg"></a></div>
+                        <h3><a href="#">青春懵懂的少女</a></h3>
+                        <p>创建者：<span><a href="#">遥远的天际</a></span></p>
+                        <i class="user"><a href="#"> <img src="/dist/images/demo/ph03.jpg"></a></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="col_con">
+                        <div class="img"><a href="#"><img src="/dist/images/demo/img04.jpg"></a></div>
+                        <h3><a href="#">青春懵懂的少女</a></h3>
+                        <p>创建者：<span><a href="#">遥远的天际</a></span></p>
+                        <i class="user"><a href="#"> <img src="/dist/images/demo/ph04.jpg"></a></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col_title">
+            <h2>相关推荐</h2>
+        </div>
+        <div class="list_imgtxt">
+            <ul class="col_l_4 col_list On-btn" id="masonry_m">
+                <!--#include virtual="/html/_content.html" -->
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    layui.config({ base: '/dist/lay/modules/'}).use('layerfrom');
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@import "var";
+
+@for $i from 1 through 12 {
+  .col_l_#{$i}{
+    $w:100% / $i;
+    >div.mb,>li,>dl.col{width:$w;float:$c_l;}
+  }
+}
+
+
+
+.panelbar{border:1px solid $c09_d;}
+.row{margin:0 -10px;}
+.m_tblr0{margin:0;}

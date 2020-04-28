@@ -1,0 +1,68 @@
+@import "common";
+@import "layout";
+
+
+.atlas_card{@include o_hid;@include po_r;margin:50px 0;text-align: $c_c;
+  .wrap{@include disp_ib;@include po_r;}
+  .m_l{@include f_l;text-align: $c_l;
+    max-width:25%;min-width:320px;
+    img{width:$w100;}
+  }
+  .m_c{width:45%;margin-left:28%;text-align: $c_l;
+    .m_tit{$h:36px;
+      h2{@extend %fs32;@include f_l;height:$h;line-height:$h;}
+      .btn_subscribe{@include disp_ib;
+        border:1px solid $c07;margin:2px 0 0 20px;padding:0 35px;border-radius:5px;color:$c07;height:$h;line-height:$h;
+        &:hover{border-color:$c07;background:$c07;color:$c10;}
+      }
+    }
+    .m_user{$w1v:36px;margin:3% 0 4% 0;
+      .user_img{
+        width:$w1v;height:$w1v;border-radius:$w50;@include f_l;overflow: $hid;
+        img{width:$w100;}
+      }
+      .user_name{@include disp_ib;height:$w1v;line-height:$w1v;margin:0 0 0 10px;}
+    }
+    .m_tag{margin:1% 0;
+      dt{@include f_l;}
+      dd{margin-left:50px;
+        a{$h:24px;font-size:12px;
+          @include disp_ib;border:1px solid $c09_d;line-height:$h;border-radius: $h/2;padding:0 15px;margin:0 10px 10px 0;
+          &:hover{border-color:$c07;background:$c07;color:$c10;}
+        }
+      }
+    }
+    .m_con{
+      line-height:1.8;color:$c09_6;
+    }
+  }
+  .m_r{@include f_r;width:$w100;
+    .num{@include po_a;top:0;text-align: $c_c;right:10px;color:$c09_3;
+      p{@extend %fs32;}
+    }
+    .num1,.num2{@include disp_ib;margin:0 5px 0 40px;}
+    .stats{$w:250px;$h:50px;
+      text-align: $c_r;
+      @include po_a;@include o_hid;
+      bottom:0;right:5px;
+      width:$w;height:$h;line-height:$h;
+      color:$c09_bd;font-size:14px;
+      span{margin-left:25px;display:inline-block;line-height:20px;
+        &:before{margin-right:5px;font-size:20px;float:$c_l;}
+      }
+      .share{ cursor: pointer;
+        &:hover{color:$c07;}
+      }
+      .sharebar{@include po_a;font-size:28px;right:-260px;text-align: $c_r;width:$w;height:$h;line-height:$h;top:0;background: $c10;@include o_hid;
+        a{margin-left:5%;}
+        .icon_close{font-size:20px;color:$c09_d;}
+      }
+    }
+  }
+  @media screen and (max-width:1336px){
+    .m_c{margin-left:350px;}
+  }
+}
+
+
+

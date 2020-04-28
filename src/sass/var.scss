@@ -1,0 +1,156 @@
+$c03:#ff8283;
+
+$c04:#ff751a;
+$c04_1: #eb6309;
+$c04_2: #ffe1cd;
+$c05:#fdd128;
+$c05_1:#e7be21;
+$c05_2:#ffc555;
+$c05_3:#ffb200;
+$c06:#0ad15d;
+$c06_1:#99d6b2;
+$c06_2:#38af55;
+$c06_3:#095447;
+$c06_4:#22bca4;
+$c06_5:#70e3c6;
+$c06_6:#58e48b;
+$c06_7:#e8fbf0;
+
+$c07:#1accf8;
+$c07_1:#0fb6ed;
+
+$c01:#000;
+$c09_3:#333;
+$c09_6: #666666;
+$c09_9:#999;
+$c09_e:#eee;
+$c09_d:#ddd;
+$c09_c:#ccc;
+$c09_a:#aaa;
+$c09_f0:#f0f0f0;
+$c09_f6:#f6f6f6;
+$c09_bd:#BDC4CA;
+$c09_f79b:#F7F9FB;
+$c10:#fff;
+
+$w50:50%;
+$w100:100%;
+$w90:90%;
+$h_20:20px;
+$h_30:30px;
+$h_40:40px;
+$h_45:45px;
+$h_50:50px;
+$wrap:1200px;
+
+//$IMG_URL:'http://op06nl2m1.bkt.clouddn.com/build';
+//$FONTS_URL:'http://op06nl2m1.bkt.clouddn.com/build';
+//$CSS_URL:'http://op06nl2m1.bkt.clouddn.com/build';
+
+
+////dist//
+$IMG_URL:'/dist';
+$FONTS_URL:'/dist';
+$CSS_URL:'/dist';
+
+
+//////DEV//
+//$IMG_URL:'/src';
+//$FONTS_URL:'/src';
+//$CSS_URL:'/src';
+
+
+@for $i from 10 through 48 {
+  .fs#{$i}{ font-size: 1px * $i; }
+}
+$position_a:absolute;
+$position_r:relative;
+$position_f:fixed;
+$c_l:left;
+$c_r:right;
+$c_c:center;
+
+$hid:hidden;
+
+
+
+//================ @  ================
+//    @extend 调用方法
+//    #somebox{
+//      @extend .shadow_c04;
+//    }
+
+.txt_hover{color:$c07;}
+
+// 文字省略号
+.ellipsis{overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//阴影
+.shadow_c01{
+  $s1:20px;$s2:0.4;
+  -webkit-box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -webkit-text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -moz-text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+}
+.shadow_c04{
+  $s1:20px;$s2:0.3;$s3:0.8;
+  -webkit-box-shadow: 0 0 $s1 rgba(255, 117, 26, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(255, 117, 26, $s2);
+  box-shadow: 0 0 $s1 rgba(255, 117, 26, $s2);
+  //-webkit-text-shadow: 0 0 $s1 rgba(255, 117, 26, $s3);
+  //-moz-text-shadow: 0 0 $s1 rgba(255, 117, 26, $s3);
+  //text-shadow: 0 0 $s1 rgba(255, 117, 26, $s3);
+}
+.shadow_c06{
+  $s1:20px;$s2:0.3;$s3:0.8;
+  -webkit-box-shadow: 0 0 $s1 rgba(10, 210, 93, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(10, 210, 93, $s2);
+  box-shadow: 0 0 $s1 rgba(10, 210, 93, $s2);
+  -webkit-text-shadow: 0 0 $s1 rgba(10, 210, 93, $s3);
+  -moz-text-shadow: 0 0 $s1 rgba(10, 210, 93, $s3);
+  text-shadow: 0 0 $s1 rgba(10, 210, 93, $s3);
+}
+.shadow_c07{
+  $s1:40px;$s2:0.1;$s3:0.8;
+  -webkit-box-shadow: 0 0 $s1 rgba(0, 198, 247, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(0, 198, 247, $s2);
+  box-shadow: 0 0 $s1 rgba(0, 198, 247, $s2);
+  //-webkit-text-shadow: 0 0 20px rgba(0, 198, 247, $s3);
+  //-moz-text-shadow: 0 0 20px rgba(0, 198, 247, $s3);
+  //text-shadow: 0 0 20px rgba(0, 198, 247, $s3);
+}
+.shadow_c01_1{
+  $s1:20px;$s2:0.2;
+  -webkit-box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -moz-box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  box-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -webkit-text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  -moz-text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+  text-shadow: 0 0 $s1 rgba(102, 102, 102, $s2);
+}
+
+.hover_img{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  opacity: 0.8;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;
+}
+
+.disp_n{display:none;}
+.disp_b{display:block;}
+.disp_ib{display:inline-block;}
+
+.pa_0{padding:0;}
+.ma_0{margin:0;}
+.ma_tb20{margin:20px 0;}
+.bg_c09f7{background:#f7f8fa;}
+
+
+

@@ -1,0 +1,2 @@
+/** moai-v1.0 MIT License By https://www.layui.com */
+ ;$(window).scroll(function(){if($(window).width()>300){var o=$(this).scrollTop();o>=318?($(".header").addClass("h_scrolled action"),$(".header .toolbar_r .go").addClass("action")):($(".header").removeClass("h_scrolled action"),$(".header .toolbar_r .go").removeClass("action"))}});
